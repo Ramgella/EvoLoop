@@ -1,0 +1,232 @@
+/* ---------- Page header ---------- */
+.page-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.page-title {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+}
+
+.page-subtitle {
+  margin-top: 4px;
+  max-width: 640px;
+  color: var(--color-text-muted);
+}
+
+/* ---------- Panels ---------- */
+.panel {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+}
+
+.panel + .panel {
+  margin-top: 20px;
+}
+
+.panel-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.panel-title {
+  font-size: 14.5px;
+  font-weight: 600;
+}
+
+.panel-subtitle {
+  margin-top: 2px;
+  color: var(--color-text-muted);
+  font-size: 13px;
+}
+
+.panel-meta {
+  color: var(--color-text-subtle);
+  font-size: 12.5px;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---------- Stats ---------- */
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.stat-card {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 16px 18px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+}
+
+.stat-label {
+  color: var(--color-text-muted);
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.stat-value {
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums;
+}
+
+.stat-hint {
+  color: var(--color-text-subtle);
+  font-size: 12.5px;
+}
+
+/* ---------- Getting started checklist ---------- */
+.checklist {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.checklist-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 20px;
+}
+
+.checklist-item + .checklist-item {
+  border-top: 1px solid var(--color-border);
+}
+
+.checklist-marker {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border: 1.5px solid var(--color-border-strong);
+  border-radius: 50%;
+  color: #fff;
+}
+
+.checklist-item.is-done .checklist-marker {
+  border-color: var(--color-accent);
+  background: var(--color-accent);
+}
+
+.checklist-text {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.checklist-title {
+  font-weight: 500;
+}
+
+.checklist-item.is-done .checklist-title {
+  color: var(--color-text-muted);
+}
+
+.checklist-description {
+  color: var(--color-text-muted);
+  font-size: 13px;
+}
+
+.checklist-item.is-upcoming .checklist-title,
+.checklist-item.is-upcoming .checklist-description {
+  color: var(--color-text-subtle);
+}
+
+/* ---------- Settings ---------- */
+.settings-section {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  gap: 32px;
+  padding: 24px;
+}
+
+.settings-section-body {
+  min-width: 0;
+}
+
+.detail-list {
+  display: grid;
+  gap: 12px;
+  margin: 0 0 16px;
+}
+
+.detail-list > div {
+  display: grid;
+  grid-template-columns: 160px minmax(0, 1fr);
+  gap: 12px;
+}
+
+.detail-list dt {
+  color: var(--color-text-muted);
+  font-size: 13px;
+}
+
+.detail-list dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+/* ---------- Empty state ---------- */
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 56px 24px;
+  text-align: center;
+}
+
+.empty-state-title {
+  margin-top: 6px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.empty-state-text {
+  max-width: 420px;
+  color: var(--color-text-muted);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .settings-section {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 640px) {
+  .stat-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .checklist-item {
+    flex-wrap: wrap;
+  }
+
+  .detail-list > div {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+}
