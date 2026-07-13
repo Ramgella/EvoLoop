@@ -145,4 +145,4 @@ Open <http://localhost:5173>.
 ## Out of scope for Sprint 1
 
 Projects, resumes, skills, timeline, evidence, OAuth, AI features, GitHub integration, resume parsing, certificates, and graphs. The sidebar shows these sections as **Coming soon**.
-sd
+sds
